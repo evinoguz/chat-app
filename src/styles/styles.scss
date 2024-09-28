@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #242424;
+  min-height: 100vh;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+// Login page css
+button {
+  background-color: #242424;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    filter: brightness(60%);
+  }
+}
+.container {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.login {
+  background-color: #fff;
+  color: #000;
+  width: 60vw;
+  max-width: 600vw;
+  height: 50vh;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  @media (max-width: 700px) {
+    width: 90vw;
+  }
+  button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    background-color: #1a1a1a;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(56, 56, 56);
+    }
+    img {
+      width: 30px;
+    }
+  }
+}
+
+// Room page css
+.room-page {
+  background-color: #fff;
+  color: #1a1a1a;
+  padding: 50px 60px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: center;
+
+  input {
+    padding: 5px 10px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+  }
+  button:last-child {
+    background-color: crimson;
+  }
+}
+
+// Chat page css
+.chat-page {
+  background-color: #fff;
+  height: 70vh;
+  width: 70vw;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 800px;
+  overflow: hidden;
+
+  @media (max-width: 650px) {
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0;
+  }
+}
+.chat-page header {
+  background-color: #4d4d7d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  button {
+    background-color: #f99417;
+  }
+}
+.chat-page form {
+  background-color: #4d4d7d;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  gap: 15px;
+
+  input {
+    width: 50%;
+    border-radius: 6px;
+    border: none;
+    padding: 5px 10px;
+    font-size: 15px;
+    box-shadow: 2px 2px 10px #000;
+  }
+
+  button {
+    background-color: #f99417;
+    padding: 10px;
+    border-radius: 50%;
+  }
+}
+.chat-page main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  color: #000;
+  padding: 10px;
+  gap: 10px;
+
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #f99417;
+    border-radius: 5px;
+  }
+}
+// Farklı kullanıların mesajları css
+.msg-other {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #000;
+
+  .user-info {
+    display: flex;
+    gap: 10px;
+  }
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  span {
+    font-weight: bold;
+  }
+  .msg {
+    background-color: #4d4d7d;
+    color: #fff;
+    border-radius: 0 10px 10px 10px;
+    padding: 4px 8px;
+  }
+}
+// Aktif kullanıcının mesajları css
+.msg-user {
+  background-color: #f99417;
+  align-self: end;
+  padding: 4px 8px;
+  border-radius: 10px 10px 0 10px;
+}
